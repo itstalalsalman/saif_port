@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import { useRouter } from "next/router";
 import Preloader from "@/components/Preloader";
 import styles from "@/styles/Container.module.css";
+import { Github, Linkedin } from "lucide-react";
 
 type IconProps = {
   ["data-hide"]: boolean;
@@ -82,8 +83,8 @@ export default function Container(props: ContainerProps) {
   const { children, ...customMeta } = props;
   const router = useRouter();
   const meta = {
-    title: "M.Abed",
-    description: `Machine Learning & Embedded Systems Engineer`,
+    title: "Mohammed Saif Abed - ML/AI Engineer",
+    description: `ML/AI Engineer specializing in NLP, LLMs, Computer Vision, and Agentic AI`,
     image: "/assets/logo.webp",
     type: "website",
     ...customMeta,
@@ -177,6 +178,14 @@ export default function Container(props: ContainerProps) {
               className="text-base"
             />
           ))}
+          <li className="flex items-center space-x-3">
+            <Link href="https://github.com/moisf56" target="_blank" rel="noopener noreferrer">
+              <Github className="h-5 w-5 text-muted-foreground hover:text-foreground transition-colors" />
+            </Link>
+            <Link href="https://linkedin.com/in/mohammedkaabed" target="_blank" rel="noopener noreferrer">
+              <Linkedin className="h-5 w-5 text-muted-foreground hover:text-foreground transition-colors" />
+            </Link>
+          </li>
         </ul>
 
         {/* Mobile menu */}
@@ -219,8 +228,16 @@ export default function Container(props: ContainerProps) {
 
                 {/* Footer */}
                 <div className="flex min-h-fit w-full flex-col space-y-8 px-[22px] py-10">
+                  <div className="flex items-center space-x-4">
+                    <Link href="https://github.com/moisf56" target="_blank" rel="noopener noreferrer">
+                      <Github className="h-6 w-6 text-muted-foreground hover:text-foreground transition-colors" />
+                    </Link>
+                    <Link href="https://linkedin.com/in/mohammedkaabed" target="_blank" rel="noopener noreferrer">
+                      <Linkedin className="h-6 w-6 text-muted-foreground hover:text-foreground transition-colors" />
+                    </Link>
+                  </div>
                   <span className="text-sm text-muted-foreground">
-                    © {new Date().getFullYear()} saif. All rights reserved.
+                    © {new Date().getFullYear()} Mohammed Saif Abed. All rights reserved.
                   </span>
                 </div>
               </div>

@@ -29,67 +29,73 @@ import { motion } from "framer-motion";
 
 const aboutStats = [
   { label: "Years of experience", value: "2+" },
-  { label: "Technologies mastered", value: "5+" },
-  { label: "Companies worked with", value: "3+" },
+  { label: "Projects completed", value: "10+" },
+  { label: "Technologies mastered", value: "15+" },
 ];
 
 const projects = [
   {
-    title: "Unqueue",
-    description: "E-commerce platform for selling digital products",
+    title: "Voice RAG Agent (Multilingual)",
+    description: "AI-powered customer support agent with 92% accuracy on Q/A datasets. Built with FAISS, PyVespa, and deployed on AWS/GCP using Docker and Kubernetes.",
     image: "",
-    href: "#",
+    href: "https://github.com/moisf56/Voice-RAG-Agent-Multilingual",
   },
   {
-    title: "InfiniteVPS",
-    description: "High performance VPS hosting solution",
+    title: "RAG Chatbot (Qwen2.5-14B-Instruct)",
+    description: "Retrieval Augmented Generation chatbot powered by Qwen2.5-14B-Instruct for intelligent, context-aware responses.",
     image: "",
-    href: "#",
+    href: "https://github.com/moisf56/AI-Powered-Chatbot-Qwen2.5-14b-Instruct",
   },
   {
-    title: "TranslateBot",
-    description: "Powerful Multilingual Translation Bot for Discord",
+    title: "Solar Panel Detection (Computer Vision)",
+    description: "U-Net neural network for rooftop segmentation and solar panel coverage automation, achieving 87% accuracy with remote sensing data.",
     image: "",
-    href: "#",
+    href: "https://github.com/moisf56",
   },
   {
-    title: "Wrona",
-    description: "Robotics-focused technology company",
+    title: "MRI 3T B-Field Inhomogeneity Measurement",
+    description: "Medical imaging project for analyzing magnetic field inhomogeneity in 3T MRI systems using advanced signal processing techniques.",
     image: "",
-    href: "#",
+    href: "https://github.com/moisf56/MRI-3T-B-Field-Inhomogeneity-Measurement",
   },
   {
-    title: "This website",
-    description: "My personal website",
+    title: "Kalman Filtering & Convex Methods",
+    description: "Implementation of Kalman filtering algorithms and convex analytic methods for signal processing and state estimation.",
     image: "",
-    href: "#",
+    href: "https://github.com/moisf56/Kalman-Filtering-and-Convex-analytic-Method",
+  },
+  {
+    title: "Monthly Cashflow Investment Tracker",
+    description: "Web-based application for tracking and analyzing personal investment cashflows and portfolio performance.",
+    image: "",
+    href: "https://github.com/moisf56/Monthly-Cashflow-Investment-Tracker",
   },
 ];
 
 const services = [
   {
-    service: "Machine Learning & Deep Learning Development",
+    service: "Machine Learning & Deep Learning",
     description:
-      "Building and optimizing models for image processing, segmentation, and classification",
+      "Developing and deploying ML/DL models using PyTorch and TensorFlow for computer vision, NLP, and predictive analytics. Expertise in model optimization and deployment.",
     icon: Code2,
   },
   {
-    service: "Embedded Systems & FPGA Design",
+    service: "LLMs & Agentic AI Development",
     description:
-      "Creating highly efficient hardware-accelerated solutions for real-time data analytics and signal processing using FPGAs and embedded platforms.",
-    icon: Frame,
-  },
-  {
-    service: "Signal Processing & Imaging Pipeline Optimization",
-    description:
-      "Enhancing performance of analog/digital imaging systems for industrial and medical use.",
-    icon: SearchCheck,
-  },
-  {
-    service: "AI Integration Consulting",
-    description:
-      "Advising on how to implement AI tools & solutions effectively in embedded devices or existing systems.",
+      "Building intelligent AI agents and chatbots using state-of-the-art LLMs. Specializing in RAG systems, vector databases (FAISS, PyVespa), and conversational AI.",
     icon: MonitorSmartphone,
+  },
+  {
+    service: "Computer Vision Solutions",
+    description:
+      "Creating advanced CV systems for image segmentation, object detection, and medical imaging. Experience with U-Net, CNNs, and real-time video analytics.",
+    icon: Eye,
+  },
+  {
+    service: "AI Pipeline & MLOps",
+    description:
+      "Designing end-to-end ML pipelines with CI/CD integration. Deploying scalable solutions on AWS, GCP, using Docker, Kubernetes, and modern DevOps practices.",
+    icon: Frame,
   },
 ];
 
@@ -184,9 +190,11 @@ export default function Home() {
               data-scroll-speed=".09"
               className="flex flex-row items-center space-x-1.5"
             >
-              <span className={styles.pill}>python</span>
-              <span className={styles.pill}>AI/ML</span>
-              <span className={styles.pill}>Torch</span>
+              <span className={styles.pill}>Python</span>
+              <span className={styles.pill}>PyTorch</span>
+              <span className={styles.pill}>LLMs</span>
+              <span className={styles.pill}>Agentic AI</span>
+              <span className={styles.pill}>Computer Vision</span>
             </div>
             <div>
               <h1
@@ -200,7 +208,7 @@ export default function Home() {
                   <br />
                 </span>
                 <span className="clash-grotesk text-gradient text-6xl 2xl:text-8xl">
-                  M. Abed
+                  Mohammed Saif Abed
                 </span>
               </h1>
               <p
@@ -209,7 +217,7 @@ export default function Home() {
                 data-scroll-speed=".06"
                 className="mt-1 max-w-lg tracking-tight text-muted-foreground 2xl:text-xl"
               >
-                An innovative Machine Learning & Embedded Systems engineer bringing AI to real-world applications.
+                ML/AI Engineer specializing in NLP, LLMs, Computer Vision, and Agentic AI. Passionate about developing AI solutions that integrate seamlessly into real-world applications.
               </p>
             </div>
             <span
@@ -218,7 +226,7 @@ export default function Home() {
               data-scroll-speed=".06"
               className="flex flex-row items-center space-x-1.5 pt-6"
             >
-              <Link href="mailto:wendoj@proton.me" passHref>
+              <Link href="mailto:moisf56@gmail.com" passHref>
                 <Button>
                   Get in touch <ChevronRight className="ml-1 h-4 w-4" />
                 </Button>
@@ -262,20 +270,18 @@ export default function Home() {
             className="my-14 flex max-w-6xl flex-col justify-start space-y-10"
           >
             <h2 className="py-16  pb-2 text-3xl font-light leading-normal tracking-tighter text-foreground xl:text-[40px]">
-              I&apos;m a Machine Learning and Embedded Systems Engineer with a strong technical foundation in{" "}
+              I&apos;m a Machine Learning Engineer with a strong foundation in{" "}
               <Link
-                href=""
+                href="https://github.com/moisf56"
                 target="_blank"
                 className="underline"
               >
-                Machine/Deep Learning, Signal Processing, & FPGA design
+                AI/ML, NLP, Computer Vision, and Agentic AI
               </Link>{" "}
-              . Since 2023, I&apos;ve developed and optimized AI-powered imaging 
-              and classification solutions—especially in medical and industrial 
-              domains. I&apos;ve worked across research labs, corporate internships, 
-              and now at Pios Mühendislik, collaborating with cross-functional 
-              teams to turn ideas into working systems—from concept and algorithm 
-              development through prototyping and deployment.
+              . I graduated from Bilkent University with a degree in Electrical & Electronics Engineering.
+              Since 2022, I&apos;ve been developing and deploying AI solutions across R&D labs and tech companies,
+              working on projects ranging from medical imaging systems at UMRAM to deep learning models at Cognizen R&D.
+              I specialize in building end-to-end ML pipelines, optimizing neural networks, and integrating AI into production systems.
             </h2>
             <div className="grid grid-cols-2 gap-8 xl:grid-cols-3">
               {aboutStats.map((stat) => (
@@ -317,11 +323,11 @@ export default function Home() {
               ✨ Projects
             </span>
             <h2 className="mt-3 text-4xl font-semibold tracking-tight tracking-tighter xl:text-6xl">
-              Streamlined digital experiences.
+              AI-powered solutions that matter.
             </h2>
             <p className="mt-1.5 text-base tracking-tight text-muted-foreground xl:text-lg">
-              I&apos;ve worked on a variety of projects, from small websites to
-              large-scale web applications. Here are some of my favorites:
+              From RAG agents to computer vision systems, I&apos;ve built ML solutions
+              across medical imaging, NLP, and embedded systems. Here are some highlights:
             </p>
 
             {/* Carousel */}
